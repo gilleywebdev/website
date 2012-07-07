@@ -1,4 +1,5 @@
-
 application/.DS_Store
 application/logs/
 application/cache/
+resources/.DS_Store
+resources/website.tmproj

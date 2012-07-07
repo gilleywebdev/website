@@ -2,3 +2,4 @@ User-agent: *
 Disallow: /css/
 Disallow: /graphics/
 Disallow: /js/
+Disallow: /resources/

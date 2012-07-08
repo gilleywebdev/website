@@ -99,6 +99,7 @@ Kohana::$config->attach(new Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
+	'website'		=> MODPATH.'website',	 //GWD Website Template
 	// 'auth'       => MODPATH.'auth',       // Basic authentication
 	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
 	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
@@ -113,8 +114,7 @@ Kohana::modules(array(
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
-Route::set('default', '(<controller>(/<action>(/<id>)))')
-	->defaults(array(
-		'controller' => 'welcome',
-		'action'     => 'index',
-	));
+
+/*
+ * Default route defined in website module
+ */

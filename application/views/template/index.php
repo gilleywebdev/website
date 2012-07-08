@@ -2,9 +2,9 @@
 <html>
 	<head>
 		<?php echo View::factory('includes/header'); ?>
-		<link rel="stylesheet" href="/styles/css/subpage.css" type="text/css">
+		<link rel="stylesheet" href="/styles/css/index.css" type="text/css">
 	</head>
-	<body id="<?php echo $pagename; ?>" class="subpage">
+	<body id="<?php echo $pagename; ?>">
 		<div id="wrapper">
 			<div id="content"><?php echo $content; ?></div>
 		</div>

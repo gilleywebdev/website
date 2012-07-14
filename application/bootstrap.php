@@ -81,8 +81,11 @@ if (isset($_SERVER['KOHANA_ENV']))
  */
 Kohana::init(array(
 	'base_url'   => '/',
+	//development
 	'profile' => Kohana::$environment !== Kohana::PRODUCTION,
-	'caching' => Kohana::$environment !== Kohana::DEVELOPMENT,
+	'errors'  => Kohana::$environment !== Kohana::PRODUCTION,
+	//production
+	'caching' => Kohana::$environment === Kohana::PRODUCTION,
 ));
 
 /**

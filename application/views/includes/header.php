@@ -1,11 +1,11 @@
-<!-- SEO -->
+<?php // SEO ?>
 <title><?php echo $title; ?></title>
 <meta name="description" content="<?php echo $description; ?>">
 
-<!-- Styles -->
-<link rel="stylesheet" href="/css/styles.css" type="text/css">
+<?php // Styles ?>
+<link rel="stylesheet" href="/styles/css/styles.css" type="text/css">
 
-<!-- Vanity -->
+<?php // Vanity ?>
 <link rel="shortcut icon" href="favicon.ico">
 <?php
 	// Facebook thumnbail on production

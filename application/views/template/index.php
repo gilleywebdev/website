@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<?php echo View::factory('includes/header'); ?>
+		<?php
+			echo View::factory('includes/header')
+				->bind('title', $title)
+				->bind('description', $description);
+		?>
 		<link rel="stylesheet" href="/styles/css/index.css" type="text/css">
 	</head>
 	<body id="<?php echo $pagename; ?>">

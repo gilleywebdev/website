@@ -103,7 +103,8 @@ Kohana::$config->attach(new Config_File);
  */
 Kohana::modules(array(
 	'static'		=> MODPATH.'static',	 // Simple static pages
-	'custom404'		=> MODPATH.'custom404'	 // Custom 404
+	'custom404'		=> MODPATH.'custom404',	 // Custom 404
+	'download'		=> MODPATH.'download',	 // Easy download headers
 	// 'auth'       => MODPATH.'auth',       // Basic authentication
 	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
 	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool

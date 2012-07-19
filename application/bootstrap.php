@@ -106,6 +106,7 @@ Kohana::modules(array(
 	'download'		=> MODPATH.'download',	 // Easy download headers
 	'custom404'		=> MODPATH.'custom404',	 // Custom 404
 	'forms'			=> MODPATH.'forms',	 	 // Contact form
+	'email'			=> MODPATH.'email',		 // Email
 	// 'auth'       => MODPATH.'auth',       // Basic authentication
 	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
 	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool

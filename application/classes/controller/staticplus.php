@@ -19,6 +19,14 @@ class Controller_Staticplus extends Controller_Static {
 
 			if($post->check())
 			{
+				//Mail
+				$message = $post['message'];
+				$subject = 'Website inquiry from '.$post['name'];
+				$from = 'info@gilleywebdev.com';
+				$to = 'chris@gilleywebdev.com';
+				
+				Email::send($to, $from, $subject, $message, $html = false);
+				
 				$this->request->redirect('thank-you');
 			}
 

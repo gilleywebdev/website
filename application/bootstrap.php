@@ -81,6 +81,7 @@ if (isset($_SERVER['KOHANA_ENV']))
  */
 Kohana::init(array(
 	'base_url'   => '/',
+	'index_file' => FALSE,
 	//development
 	'profile' => Kohana::$environment !== Kohana::PRODUCTION,
 	'errors'  => Kohana::$environment !== Kohana::PRODUCTION,
@@ -104,7 +105,7 @@ Kohana::$config->attach(new Config_File);
 Kohana::modules(array(
 	'download'		=> MODPATH.'download',	 // Easy download headers
 	'custom404'		=> MODPATH.'custom404',	 // Custom 404
-	'forms'			=> MODPATH.'forms',	 // Contact form
+	'forms'			=> MODPATH.'forms',	 	 // Contact form
 	// 'auth'       => MODPATH.'auth',       // Basic authentication
 	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
 	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool

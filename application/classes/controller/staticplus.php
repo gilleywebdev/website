@@ -19,8 +19,10 @@ class Controller_Staticplus extends Controller_Static {
 
 			if($post->check())
 			{
+				$message = 'Contact form submission - "'.$post['message'].'" from '.$post['name'].' ('.$post['email'].')';
+				Kohana::$log->add(Log::NOTICE, $message);
+				
 				//Mail
-				$message = $post['message'];
 				$subject = 'Website inquiry from '.$post['name'];
 				$from = 'info@gilleywebdev.com';
 				$to = 'chris@gilleywebdev.com';

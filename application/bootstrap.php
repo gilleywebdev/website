@@ -108,7 +108,7 @@ Kohana::modules(array(
 	'forms'			=> MODPATH.'forms',	 	 // Contact form
 	'email'			=> MODPATH.'email',		 // Email
 	'admin'			=> MODPATH.'admin',		 // Standardized admin section
-	// 'auth'       => MODPATH.'auth',       // Basic authentication
+	'auth'          => MODPATH.'auth',       // Basic authentication
 	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
 	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
 	'database'   	=> MODPATH.'database',   // Database access

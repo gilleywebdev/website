@@ -1,11 +1,16 @@
-<?php // SEO ?>
+<!-- SEO -->
 <title><?php echo $title; ?></title>
 <meta name="description" content="<?php echo $description; ?>">
 
-<?php // Styles
-Styles::output();
+<!-- Styles -->
+<?php
+	Styles::output(array(
+		array('normalize', Styles::BASE),
+		array('template', Styles::TEMPLATE),
+	));
 ?>
-<?php // Vanity ?>
+
+<!-- Vanity -->
 <link rel="shortcut icon" href="favicon.ico">
 <?php
 	// Facebook thumnbail on production
@@ -13,4 +18,3 @@ Styles::output();
 	{
 		echo '<meta property="og:image" content="'.$_SERVER['SERVER_NAME'].'/graphics/fb-thumb.jpg">';
 	}
-?>

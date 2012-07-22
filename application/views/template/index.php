@@ -6,7 +6,6 @@
 				->bind('title', $title)
 				->bind('description', $description);
 		?>
-	<link rel="stylesheet" type="text/css" href="../template.css">
 	</head>
 	<body class="<?php echo $pagename; ?>_page">
 		<div class="wrapper">

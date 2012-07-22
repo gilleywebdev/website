@@ -103,12 +103,7 @@ Kohana::$config->attach(new Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
-	'download'		=> MODPATH.'download',	 // Easy download headers
-	'custom404'		=> MODPATH.'custom404',	 // Custom 404
-	'forms'			=> MODPATH.'forms',	 	 // Contact form
-	'email'			=> MODPATH.'email',		 // Email
-	'assets'		=> MODPATH.'assets',	 // Assets
-	// 'admin'		=> MODPATH.'admin',		 // Standardized admin section
+/** KOHANA **/
 	'auth'          => MODPATH.'auth',       // Basic authentication
 	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
 	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
@@ -117,7 +112,15 @@ Kohana::modules(array(
 	'orm'        	=> MODPATH.'orm',        // Object Relationship Mapping
 	// 'unittest'   => MODPATH.'unittest',   // Unit testing
 	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
-	'static'		=> MODPATH.'static',	 // Simple static pages
+/** INSTALLED **/
+	'email'			=> MODPATH.'email',		 // Email
+/** CUSTOM **/
+	// 'admin'		=> MODPATH.'admin',		 // Standardized admin section.
+	'download'		=> MODPATH.'download',	 // Easy download headers
+	'custom404'		=> MODPATH.'custom404',	 // Custom 404
+	'forms'			=> MODPATH.'forms',	 	 // Contact form. USES: assets, email
+	'assets'		=> MODPATH.'assets',	 // Assets
+	'static'		=> MODPATH.'static',	 // Simple static pages. USES: assets
 ));
 
 /**

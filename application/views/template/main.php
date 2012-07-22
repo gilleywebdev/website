@@ -6,11 +6,10 @@
 				->bind('title', $title)
 				->bind('description', $description);
 		?>
-		<link rel="stylesheet" href="/styles/css/subpage.css" type="text/css">
 	</head>
-	<body id="<?php echo $pagename; ?>" class="subpage">
-		<div id="wrapper">
-			<div id="content"><?php echo $content; ?></div>
+	<body class="<?php echo $pagename; ?>_page" class="subpage">
+		<div class="wrapper">
+			<div class="content"><?php echo $content; ?></div>
 		</div>
 	</body>
 </html>

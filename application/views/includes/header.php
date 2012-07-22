@@ -2,9 +2,9 @@
 <title><?php echo $title; ?></title>
 <meta name="description" content="<?php echo $description; ?>">
 
-<?php // Styles ?>
-<link rel="stylesheet" href="/styles/css/styles.css" type="text/css">
-
+<?php // Styles
+Styles::output();
+?>
 <?php // Vanity ?>
 <link rel="shortcut icon" href="favicon.ico">
 <?php

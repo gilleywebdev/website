@@ -3,7 +3,7 @@
 class Controller_Staticplus extends Controller_Static {
 	public function action_index()
 	{
-		
+		$this->template = View::factory('template/index');
 	}
 	
 	public function action_contact()
@@ -37,6 +37,8 @@ class Controller_Staticplus extends Controller_Static {
 		else{
 			$errors = array();
 		}
+
+		Styles::add('styles');
 
 		View::bind_global('errors', $errors);
 	}

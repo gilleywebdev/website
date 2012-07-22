@@ -107,7 +107,8 @@ Kohana::modules(array(
 	'custom404'		=> MODPATH.'custom404',	 // Custom 404
 	'forms'			=> MODPATH.'forms',	 	 // Contact form
 	'email'			=> MODPATH.'email',		 // Email
-	'admin'			=> MODPATH.'admin',		 // Standardized admin section
+	'assets'		=> MODPATH.'assets',	 // Assets
+	// 'admin'		=> MODPATH.'admin',		 // Standardized admin section
 	'auth'          => MODPATH.'auth',       // Basic authentication
 	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
 	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool

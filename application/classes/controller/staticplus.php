@@ -19,7 +19,13 @@ class Controller_Staticplus extends Controller_Static {
 
 			if($post->check())
 			{
-				$message = View::factory('emails/contact')->set('post', $_POST);
+				$filter_out = array('honeypot', 'formaction');
+				
+				$fields = $_POST;
+				unset($fields['honeypot']);
+				unset($fields['formaction']);
+
+				$message = View::factory('emails/contact')->set('fields', $fields);
 				Kohana::$log->add(Log::NOTICE, $message);
 				
 				//Mail

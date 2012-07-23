@@ -105,17 +105,19 @@ Kohana::$config->attach(new Config_File);
 Kohana::modules(array(
 /** KOHANA **/
 	'auth'          => MODPATH.'auth',       // Basic authentication
-	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
-	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
+//	'cache'			=> MODPATH.'cache',      // Caching with multiple backends
+//	'codebench'		=> MODPATH.'codebench',  // Benchmarking tool
 	'database'   	=> MODPATH.'database',   // Database access
-	// 'image'      => MODPATH.'image',      // Image manipulation
+//	'image'			=> MODPATH.'image',      // Image manipulation
 	'orm'        	=> MODPATH.'orm',        // Object Relationship Mapping
-	// 'unittest'   => MODPATH.'unittest',   // Unit testing
-	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
+//	'unittest'		=> MODPATH.'unittest',   // Unit testing
+//	'userguide'		=> MODPATH.'userguide',  // User guide and API documentation
+
 /** INSTALLED **/
 	'email'			=> MODPATH.'email',		 // Email
+
 /** CUSTOM **/
-	// 'admin'		=> MODPATH.'admin',		 // Standardized admin section.
+//	'admin'			=> MODPATH.'admin',		 // Standardized admin section.
 	'download'		=> MODPATH.'download',	 // Easy download headers
 	'custom404'		=> MODPATH.'custom404',	 // Custom 404
 	'forms'			=> MODPATH.'forms',	 	 // Contact form. USES: assets, email

@@ -25,7 +25,7 @@ class Controller_Staticplus extends Controller_Static {
 				//Mail
 				$subject = 'Website inquiry from '.$post['name'];
 				$from = 'info@gilleywebdev.com';
-				$to = 'chris@gilleywebdev.com';
+				$to = Nap::info('email');
 				
 				Email::send($to, $from, $subject, $message, $html = false);
 				

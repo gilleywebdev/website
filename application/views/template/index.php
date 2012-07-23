@@ -10,6 +10,7 @@
 	<body class="<?php echo $pagename; ?>_page">
 		<div class="wrapper">
 			<div class="content"><?php echo $content; ?></div>
+			<?php echo Nap::info('address'); ?>
 		</div>
 	</body>
 </html>

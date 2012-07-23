@@ -19,15 +19,15 @@ class Controller_Staticplus extends Controller_Static {
 
 			if($post->check())
 			{
-				$message = 'Contact form submission - "'.$post['message'].'" from '.$post['name'].' ('.$post['email'].')';
+				$message = View::factory('emails/contact')->set('post', $_POST);
 				Kohana::$log->add(Log::NOTICE, $message);
 				
 				//Mail
 				$subject = 'Website inquiry from '.$post['name'];
-				$from = 'info@gilleywebdev.com';
+				$from = 'info@'.$_SERVER['SERVER_NAME'];
 				$to = Nap::info('email');
 				
-				Email::send($to, $from, $subject, $message, $html = false);
+				Email::send($to, $from, $subject, $message, $html = true);
 				
 				$this->request->redirect('thank-you');
 			}

@@ -103,6 +103,7 @@ Kohana::$config->attach(new Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
+
 /** KOHANA **/
 	'auth'          => MODPATH.'auth',       // Basic authentication
 //	'cache'			=> MODPATH.'cache',      // Caching with multiple backends

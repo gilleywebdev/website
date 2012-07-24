@@ -123,6 +123,7 @@ Kohana::modules(array(
 	'custom404'		=> MODPATH.'custom404',		// Custom 404
 	'forms'			=> MODPATH.'forms',			// Contact form. USES: assets, email, nap
 	'assets'		=> MODPATH.'assets',		// Assets
+	'plugins'		=> MODPATH.'plugins',		// Plugins
 	'nap'			=> MODPATH.'nap',			// Name, Address, Phone
 	'static'		=> MODPATH.'static',		// Simple static pages. USES: assets
 ));

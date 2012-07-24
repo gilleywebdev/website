@@ -13,6 +13,4 @@
 		</div>
 	</body>
 </html>
-<?php
-	Scripts::output();
-?>
+<?php Scripts::output() ?>

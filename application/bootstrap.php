@@ -118,7 +118,7 @@ Kohana::modules(array(
 	'email'			=> MODPATH.'email',			// Email
 
 /** CUSTOM **/
-//	'admin'			=> MODPATH.'admin',			// Standardized admin section.
+	'admin'			=> MODPATH.'admin',			// Standardized admin section.
 	'download'		=> MODPATH.'download',		// Easy download headers
 	'custom404'		=> MODPATH.'custom404',		// Custom 404
 	'forms'			=> MODPATH.'forms',			// Contact form. USES: plugins, email, nap

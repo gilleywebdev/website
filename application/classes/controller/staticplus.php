@@ -39,13 +39,12 @@ class Controller_Staticplus extends Controller_Static {
 			}
 
 			$errors = $post->errors('contact');
-		}
-		else{
-			$errors = array();
+			if(isset($errors))
+			{
+				View::bind_global('errors', $errors);
+			}
 		}
 
 		Styles::add('styles');
-
-		View::bind_global('errors', $errors);
 	}
 }

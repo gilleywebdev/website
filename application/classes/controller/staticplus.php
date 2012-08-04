@@ -10,7 +10,7 @@ class Controller_Staticplus extends Controller_Static {
 	{
 		if(Form::is_posted())
 		{
-			$post = Validation::factory($_POST)
+			$post = Validation::factory($this->request->post())
 				->rule('name', 'not_empty')
 				->rule('email', 'not_empty')
 				->rule('email', 'email')
@@ -21,7 +21,7 @@ class Controller_Staticplus extends Controller_Static {
 			{
 				$filter_out = array('honeypot', 'formaction');
 				
-				$fields = $_POST;
+				$fields = $this->request->post();
 				unset($fields['honeypot']);
 				unset($fields['formaction']);
 

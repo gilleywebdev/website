@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<?php
-			echo View::factory('includes/header')
+		<?php echo View::factory('includes/header')
 				->bind('title', $title)
-				->bind('description', $description);
-		?>
+				->bind('description', $description) ?>
 	</head>
 	<body class="<?php echo $pagename; ?>_page">
 		<div class="wrapper">

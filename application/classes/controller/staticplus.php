@@ -23,7 +23,7 @@ class Controller_Staticplus extends Controller_Static {
 				
 				$fields = $this->request->post();
 				unset($fields['honeypot']);
-				unset($fields['formaction']);
+				unset($fields['is_posted']);
 
 				$message = View::factory('emails/contact')->set('fields', $fields);
 				Kohana::$log->add(Log::NOTICE, $message);

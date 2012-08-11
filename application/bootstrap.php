@@ -124,7 +124,7 @@ Kohana::modules(array(
 	'forms'			=> MODPATH.'forms',			// Contact form. USES: plugins, email, nap
 	'assets'		=> MODPATH.'assets',		// Assets for including
 	'plugins'		=> MODPATH.'plugins',		// Asset and plugin manager
-	'nap'			=> MODPATH.'nap',			// Site-wide contact info manager
+	'info'			=> MODPATH.'info',			// Site-wide contact info manager
 	'static'		=> MODPATH.'static',		// Simple static pages. USES: plugins
 ));
 

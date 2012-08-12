@@ -43,7 +43,5 @@ class Controller_Staticplus extends Controller_Static {
 				View::bind_global('errors', $errors);
 			}
 		}
-
-		Styles::add('styles');
 	}
 }

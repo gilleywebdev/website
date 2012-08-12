@@ -31,7 +31,7 @@ class Controller_Staticplus extends Controller_Static {
 				//Mail
 				$subject = 'Website inquiry from '.$post['name'];
 				$from = 'info@'.$_SERVER['SERVER_NAME'];
-				$to = Nap::info('email');
+				$to = Info::info('email');
 				
 				Email::send($to, $from, $subject, $message, $html = true);
 				

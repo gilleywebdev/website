@@ -8,10 +8,9 @@ class Controller_Staticplus extends Controller_Static {
 	
 	public function action_contact()
 	{
-		if(Form::is_posted())
+		if($post = Form::post())
 		{
-			$post = Validation::factory($this->request->post())
-				->rule('name', 'not_empty')
+			$post->rule('name', 'not_empty')
 				->rule('email', 'not_empty')
 				->rule('email', 'email')
 				->rule('message', 'not_empty')

@@ -110,6 +110,7 @@ Kohana::modules(array(
 //	'codebench'		=> MODPATH.'codebench',		// Benchmarking tool
 	'database'		=> MODPATH.'database',		// Database access
 //	'image'			=> MODPATH.'image',			// Image manipulation
+	'orm_overwrites'=> MODPATH.'orm_overwrites',// Custom overwrites for ORM module
 	'orm'			=> MODPATH.'orm',			// Object Relationship Mapping
 //	'unittest'		=> MODPATH.'unittest',		// Unit testing
 	'userguide'		=> MODPATH.'userguide',		// User guide and API documentation
@@ -128,6 +129,8 @@ Kohana::modules(array(
 	'info'			=> MODPATH.'info',			// Site-wide contact info manager
 	'static'		=> MODPATH.'static',		// Simple static pages. USES: plugins
 ));
+
+Cookie::$salt = 'B8!ajzsl0J4zZ';
 
 Kohana::$config->load('database');
 Kohana::$config->attach(new Config_Database);

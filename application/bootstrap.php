@@ -103,21 +103,6 @@ Kohana::$config->attach(new Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
-
-/** KOHANA **/
-	'auth'			=> MODPATH.'auth',			// Basic authentication
-//	'cache'			=> MODPATH.'cache',			// Caching with multiple backends
-//	'codebench'		=> MODPATH.'codebench',		// Benchmarking tool
-	'database'		=> MODPATH.'database',		// Database access
-//	'image'			=> MODPATH.'image',			// Image manipulation
-	'orm_overwrites'=> MODPATH.'orm_overwrites',// Custom overwrites for ORM module
-	'orm'			=> MODPATH.'orm',			// Object Relationship Mapping
-//	'unittest'		=> MODPATH.'unittest',		// Unit testing
-	'userguide'		=> MODPATH.'userguide',		// User guide and API documentation
-
-/** INSTALLED **/
-	'email'			=> MODPATH.'email',			// Email
-
 /** CUSTOM **/
 	'admin'			=> MODPATH.'admin',			// Standardized admin section.
 	'admin_info'	=> MODPATH.'admin_info',	// Info module for admin
@@ -128,6 +113,19 @@ Kohana::modules(array(
 	'plugins'		=> MODPATH.'plugins',		// Asset and plugin manager
 	'info'			=> MODPATH.'info',			// Site-wide contact info manager
 	'static'		=> MODPATH.'static',		// Simple static pages. USES: plugins
+
+/** INSTALLED **/
+	'email'			=> MODPATH.'email',			// Email
+		
+/** KOHANA **/
+	'auth'			=> MODPATH.'auth',			// Basic authentication
+//	'cache'			=> MODPATH.'cache',			// Caching with multiple backends
+//	'codebench'		=> MODPATH.'codebench',		// Benchmarking tool
+	'database'		=> MODPATH.'database',		// Database access
+//	'image'			=> MODPATH.'image',			// Image manipulation
+	'orm'			=> MODPATH.'orm',			// Object Relationship Mapping
+//	'unittest'		=> MODPATH.'unittest',		// Unit testing
+	'userguide'		=> MODPATH.'userguide',		// User guide and API documentation
 ));
 
 Cookie::$salt = 'B8!ajzsl0J4zZ';

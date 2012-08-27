@@ -15,6 +15,6 @@
 <link rel="shortcut icon" href="favicon.ico">
 
 <!-- Facebook info -->
-<?php if(Kohana::$environment === Kohana::PRODUCTION && $_SERVER['SERVER_NAME']): ?>
-	<meta property="og:image" content="<?php echo $_SERVER['SERVER_NAME'].'/graphics/fb-thumb.jpg' ?> ">
+<?php if(Kohana::$environment === Kohana::PRODUCTION): ?>
+	<meta property="og:image" content="<?php echo DOMAIN.'/graphics/fb-thumb.jpg' ?> ">
 <?php endif;

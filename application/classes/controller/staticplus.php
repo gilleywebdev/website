@@ -18,18 +18,18 @@ class Controller_Staticplus extends Controller_Static {
 
 			if($post->check())
 			{
-				$fields = $this->request->post();
+				$fields = $post->data();
 				unset($fields['honeypot']);
 
 				$message = View::factory('emails/contact')->set('fields', $fields);
-				
+
 				//Mail
 				$subject = 'Website inquiry from '.$post['name'];
-				$from = 'info@'.$_SERVER['SERVER_NAME'];
+				$from = 'info@'.DOMAIN;
 				$to = Info::get('email');
-				
+
 				Email::send($to, $from, $subject, $message, $html = true);
-				
+
 				$this->request->redirect('thank-you');
 			}
 

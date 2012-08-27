@@ -108,7 +108,7 @@ Kohana::modules(array(
 	'admin_info'	=> MODPATH.'admin_info',	// Info module for admin
 	'download'		=> MODPATH.'download',		// Easy download headers
 	'custom404'		=> MODPATH.'custom404',		// Custom 404
-	'forms'			=> MODPATH.'forms',			// Contact form. USES: plugins, email, nap
+	'forms'			=> MODPATH.'forms',			// Contact form. USES: plugins, email, info
 	'assets'		=> MODPATH.'assets',		// Assets for including
 	'plugins'		=> MODPATH.'plugins',		// Asset and plugin manager
 	'info'			=> MODPATH.'info',			// Site-wide contact info manager

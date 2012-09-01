@@ -1,0 +1,161 @@
+// Typography
+@mixin body {
+	@include sans-serif;
+	line-height: 1.5;
+	color: $textCol;
+	background-color: $backgroundCol; }
+	
+@mixin sans-serif {
+	font-family: sans-serif; }
+	
+@mixin serif {
+	font-family: serif; }
+
+@mixin font-size ($size: 16) {
+	$rem: ($size / 16);
+	font-size: ($size * 1px);
+	font-size: ($rem * 1rem); }
+
+// Hovers
+@mixin hover ($col) {
+	&:hover, &:active, &:focus {
+		color: $col; }
+}
+
+@mixin hover-bg ($col) {
+	&:hover, &:active, &:focus {
+		background-color: $col; }
+}
+
+@mixin hover-reset ($col: $linkColHover, $shadow: none) {
+	&:hover,
+	&:active,
+	&:focus {
+		color: $col;
+		text-shadow: $shadow; }
+}
+
+// Borders
+@mixin border ($col: $keylineCol, $size: 1px, $style: solid) {
+	border: $size $style $col; }
+
+@mixin border-set ($where: top, $col: $keylineCol, $size: 1px, $style: solid) {
+	border-#{$where}: $size $style $col; }	
+	
+// Margins
+@mixin zero {
+	padding: 0;
+	margin: 0; }
+	
+@mixin reset-list {
+	list-style: none;
+	@extend .zero-left; }
+
+// Shadows
+@mixin drop-shadow {
+	@include box-shadow; }
+
+@mixin inset-shadow {
+	@include box-shadow-inset; }
+	
+// Image Replacement
+@mixin hide-text {
+	text-indent: -99999px;
+	overflow: hidden; }
+
+@mixin sprite ($bgX: 0, $bgY: 0, $color: transparent) {
+	background: $color url('../img/sprite.png') $bgX $bgY no-repeat; }
+
+@mixin ir ($width: auto, $height: auto, $bgX: 0, $bgY: 0) {
+	display: block;
+	width: $width;
+	height: 0;
+	padding-top: $height;
+	overflow: hidden;
+	background: url('../img/sprite.png') $bgX $bgY no-repeat; }
+	
+// Pseudo Content	
+@mixin pseudo {
+	position: absolute;
+	display: block;
+	content: ""; }
+	
+@mixin pseudo-before ($width: auto, $height: auto, $left: 0, $top: 0, $bgX: 0, $bgY: 0) {
+	position: relative;
+	
+	&:before {
+		@include pseudo;
+		left: $left;
+		top: $top;
+		width: $width;
+		height: $height;
+		background: url('../img/sprite.png') $bgX $bgY no-repeat; }
+}
+
+@mixin pseudo-after ($width: auto, $height: auto, $right: 0, $bottom: 0, $bgX: 0, $bgY: 0) {
+	position: relative;
+	
+	&:after {
+		@include pseudo;
+		right: $right;
+		bottom: $bottom;
+		width: $width;
+		height: $height;
+		background: url('../img/sprite.png') $bgX $bgY no-repeat; }
+}
+
+// Clearfix
+@mixin cf {
+	zoom : 1;
+	
+	&:before, &:after { content: ""; display: table; }
+	&:after { clear : both; }
+}
+
+// CSS3
+@mixin box-sizing ($type: border) {
+	-moz-box-sizing: #{$type}-box;
+	-webkit-box-sizing: #{$type}-box;
+	box-sizing: #{$type}-box; }
+
+@mixin border-radius($radius: .5em) {
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+	border-radius: $radius;
+	
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box; }
+	
+@mixin linear-gradient-y($start: #eee, $stop: #fff) {
+	background: $start;
+	background: -moz-linear-gradient(top, $start 0%,$stop 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start), color-stop(100%,$stop));
+	background: -webkit-linear-gradient(top, $start 0%,$stop 100%);
+	background: -o-linear-gradient(top, $start 0%,$stop 100%);
+	background: -ms-linear-gradient(top, $start 0%,$stop 100%);
+	background: linear-gradient(top, $start 0%,$stop 100%); }
+	
+@mixin linear-gradient-x($start: #eee, $stop: #fff) {
+	background: $start;
+	background: -moz-linear-gradient(left, $start 0%,$stop 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,$start), color-stop(100%,$stop));
+	background: -webkit-linear-gradient(left, $start 0%,$stop 100%);
+	background: -o-linear-gradient(left, $start 0%,$stop 100%);
+	background: -ms-linear-gradient(left, $start 0%,$stop 100%);
+	background: linear-gradient(left, $start 0%,$stop 100%); }
+	
+@mixin box-shadow($x: 0, $y: 1px, $blur: 2px, $alpha: 0.1) {
+	-moz-box-shadow: $x $y $blur rgba(0, 0, 0, $alpha);
+	-webkit-box-shadow: $x $y $blur rgba(0, 0, 0, $alpha);
+	box-shadow: $x $y $blur rgba(0, 0, 0, $alpha); }
+
+@mixin box-shadow-inset($x: 0, $y: 1px, $blur: 2px, $alpha: 0.4) {
+	-moz-box-shadow: inset $x $y $blur rgba(0, 0, 0, $alpha);
+	-webkit-box-shadow: inset $x $y $blur rgba(0, 0, 0, $alpha);
+	box-shadow: inset $x $y $blur rgba(0, 0, 0, $alpha); }
+
+@mixin opacity($alpha: .5) {
+	-moz-opacity: $alpha;
+	-webkit-opacity: $alpha;
+	opacity: $alpha; }

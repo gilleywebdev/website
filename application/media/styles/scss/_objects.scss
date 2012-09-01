@@ -1,0 +1,13 @@
+/* -- NAV -- */
+.nav {
+	@extend .reset-list;
+
+	li {
+		display: inline;
+		@extend .zero-bottom;
+		padding: 0 .5em; }
+		
+	a {
+		display: inline-block; }	
+	
+}

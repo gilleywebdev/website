@@ -1,0 +1,26 @@
+// Typography
+.hover-reset {
+	@include hover-reset; }
+
+.font-smaller {
+	@include font-size(14); }
+
+// Margins
+.zero-top {
+	margin-top: 0; }
+
+.zero-bottom {
+	margin-bottom: 0; }
+	
+.zero-left {
+	margin-left: 0; }
+	
+.reset-list {
+	@include reset-list; }	
+
+.baseline {
+	margin-bottom: $baseline; }
+	
+// Clearfix
+.cf {
+	@include cf; }	

@@ -112,7 +112,8 @@ Kohana::modules(array(
 	'assets'		=> MODPATH.'assets',		// Assets for including
 	'plugins'		=> MODPATH.'plugins',		// Asset and plugin manager
 	'info'			=> MODPATH.'info',			// Site-wide contact info manager
-	'static'		=> MODPATH.'static',		// Simple static pages. USES: plugins
+	'static'		=> MODPATH.'static',		// Simple static pages. USES: plugins, helper
+	'helper'		=> MODPATH.'helper',		// Helper methods for views
 
 /** INSTALLED **/
 	'email'			=> MODPATH.'email',			// Email

@@ -104,7 +104,8 @@ Kohana::$config->attach(new Config_File);
  */
 Kohana::modules(array(
 /** CUSTOM **/
-	'admin'			=> MODPATH.'admin',			// Standardized admin section.
+	'admin_seo'		=> MODPATH.'admin_seo',		// SEO tqble for static pages
+	'admin'			=> MODPATH.'admin',			// Standardized admin section, users module.
 	'admin_info'	=> MODPATH.'admin_info',	// Info module for admin
 //	'download'		=> MODPATH.'download',		// Easy download headers
 	'custom404'		=> MODPATH.'custom404',		// Custom 404

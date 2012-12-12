@@ -6,10 +6,17 @@
 <meta name="description" content="<?php echo $description ?>">
 
 <!-- Styles -->
-<?php Styles::output(array(
+<?php Styles::output('styles', array(
 		array('normalize', Styles::BASE),
 		array('template', Styles::TEMPLATE),
-	)) ?>
+	));  ?>
+	
+<?php
+/* Styles::output()
+		->add('normalize', Styles::BASE)
+		->add('template', Styles::TEMPLATE);
+*/
+?>
 
 <!-- Vanity -->
 <link rel="shortcut icon" href="favicon.ico">

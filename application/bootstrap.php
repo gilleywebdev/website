@@ -118,7 +118,7 @@ Kohana::modules(array(
 
 /** INSTALLED **/
 	'email'			=> MODPATH.'email',			// Email
-		
+
 /** KOHANA **/
 	'auth'			=> MODPATH.'auth',			// Basic authentication
 //	'cache'			=> MODPATH.'cache',			// Caching with multiple backends

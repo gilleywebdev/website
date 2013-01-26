@@ -125,6 +125,7 @@ Kohana::modules(array(
 //	'codebench'		=> MODPATH.'codebench',		// Benchmarking tool
 	'database'		=> MODPATH.'database',		// Database access
 //	'image'			=> MODPATH.'image',			// Image manipulation
+	'minion'		=> MODPATH.'minion',		// CLI Tasks
 	'orm'			=> MODPATH.'orm',			// Object Relationship Mapping
 //	'unittest'		=> MODPATH.'unittest',		// Unit testing
 	'userguide'		=> MODPATH.'userguide',		// User guide and API documentation
@@ -137,8 +138,11 @@ Cookie::$salt = 'change_me';
 Kohana::$config->load('database');
 Kohana::$config->attach(new Config_Database);
 
-// You can set this explicitly if SERVER_NAME isn't what you want
-define('DOMAIN', $_SERVER['SERVER_NAME']);
+if ( ! PHP_SAPI == 'cli')
+{
+	// You can set this explicitly if SERVER_NAME isn't what you want
+	define('DOMAIN', $_SERVER['SERVER_NAME']);
+}
 
 /**
  * Set the routes. Each route must have a minimum of a name, a URI and a set of

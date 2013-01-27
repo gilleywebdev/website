@@ -30,7 +30,7 @@ class Controller_Staticplus extends Controller_Static {
 
 				Email::send($to, $from, $subject, $message, $html = true);
 
-				$this->request->redirect('thank-you');
+				$this->redirect('thank-you');
 			}
 
 			$errors = $post->errors('contact');

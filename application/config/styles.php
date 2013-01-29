@@ -3,6 +3,7 @@
 return array(
 	'default' => array(
 		array('normalize', Styles::BASE),
+		array('forms', Styles::INCLUDED),
 		array('global', Styles::TEMPLATE),
 	),
 );
